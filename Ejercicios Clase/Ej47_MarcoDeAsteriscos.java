@@ -7,7 +7,7 @@ public class Ej47_MarcoDeAsteriscos {
         String espacio = " ";
 
         for (int i = 0; i < cadenaTexto.length; i++) {
-            cadenaTexto[i] = JOptionPane.showInputDialog("Introduce una palabra (" + i + "-5): ");
+            cadenaTexto[i] = JOptionPane.showInputDialog("Introduce una palabra (" + (i+1) + "-5): ");
             if (cadenaTexto[i].length() > longitud) {
                 longitud = cadenaTexto[i].length();
             }
