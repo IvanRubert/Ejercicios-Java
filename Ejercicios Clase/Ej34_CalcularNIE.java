@@ -1,6 +1,6 @@
 import javax.swing.*;
 
-public class Ej34_CalcularDNI {
+public class Ej34_CalcularNIE {
     public static void main(String[] args) {
         char[] letrasDNI = {'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'};
         char letraInicial;
