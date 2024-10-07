@@ -5,13 +5,25 @@ public class Ej18_Reloj {
         int hora = -1, minutos = -1, segundos = -1;
 
         while (hora < 0 || hora > 23) {
-            hora = Integer.parseInt(JOptionPane.showInputDialog("Introduce una hora (0 - 23): "));
+            try {
+                hora = Integer.parseInt(JOptionPane.showInputDialog("Introduce una hora (0 - 23): "));
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(null, "El valor introducido no esta dentro del rango", "Error", JOptionPane.ERROR_MESSAGE);
+            }
         }
         while (minutos < 0 || minutos > 59) {
-            minutos = Integer.parseInt(JOptionPane.showInputDialog("Introduce los minutos (0 - 59): "));
+            try {
+                minutos = Integer.parseInt(JOptionPane.showInputDialog("Introduce los minutos (0 - 59): "));
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(null, "El valor introducido no esta dentro del rango", "Error", JOptionPane.ERROR_MESSAGE);
+            }
         }
         while (segundos < 0 || segundos > 59) {
-            segundos = Integer.parseInt(JOptionPane.showInputDialog("Introduce los segundos (0 - 59): "));
+            try {
+                segundos = Integer.parseInt(JOptionPane.showInputDialog("Introduce los segundos (0 - 59): "));
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(null, "El valor introducido no esta dentro del rango", "Error", JOptionPane.ERROR_MESSAGE);
+            }
         }
 
         while (true) {
