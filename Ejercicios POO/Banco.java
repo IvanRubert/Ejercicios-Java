@@ -9,7 +9,7 @@ public class Banco {
         c1.retirada(50);
         c2.retirada(10);
 
-        System.out.println("Dinero en la cuenta "+c1.getNumCuenta()+" con titular "+c1.getTitular()+" tiene: "+c1.dineroEnCuenta());
-        System.out.println("Dinero en la cuenta "+c2.getNumCuenta()+" con titular "+c2.getTitular()+" tiene: "+c2.dineroEnCuenta());
+        System.out.println(c1.datos());
+        System.out.println(c2.datos());
     }
 }

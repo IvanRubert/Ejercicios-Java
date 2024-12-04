@@ -1,4 +1,8 @@
 public class Persona {
+    public static final int PESO_BAJO = -1;
+    public static final int PESO_IDEAL = 0;
+    public static final int PESO_ALTO = 1;
+
     private String nombre;
     private int edad;
     private float peso, altura;
@@ -60,10 +64,10 @@ public class Persona {
     public int calcularIMC(){
         double imc = peso/Math.pow(altura,2);
         if (imc<20){
-            return -1;
+            return PESO_BAJO;
         } else if (imc>25){
-            return 1;
-        }else return 0;
+            return PESO_ALTO;
+        }else return PESO_IDEAL;
     }
     public String datos(){
         return "********\nNombre: "+nombre+"\nEdad: "+edad+" años\nSexo: "+sexo+"\nPeso: "+peso+" Kg\nAltura: "+altura+" m";

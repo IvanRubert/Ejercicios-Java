@@ -8,7 +8,6 @@ public class CuentaBancaria {
     public CuentaBancaria(String nombre, String num){
         titular = nombre;
         numCuenta = num;
-        saldo = 0;
     }
     public CuentaBancaria(String nombre, String num, float dinero){
         titular = nombre;
@@ -53,8 +52,8 @@ public class CuentaBancaria {
             System.out.println("Se ha retirado "+dinero+"€ de la cuenta "+numCuenta);
         }
     }
-    public String dineroEnCuenta(){
+    public String datos(){
         DecimalFormat formato = new DecimalFormat("#.##");
-        return formato.format(saldo)+"€";
+        return "El titular "+titular+" tiene "+formato.format(saldo)+"€ en la cuenta"+ numCuenta;
     }
 }
