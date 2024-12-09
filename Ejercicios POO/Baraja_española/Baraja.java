@@ -23,9 +23,10 @@ public class Baraja {
         return lista;
     }
     public void barajar(){
-        baraja.removeAll(baraja);
+        for (int i = 0; i < monton.toArray().length; i++) {
+            baraja.add(monton.get(i));
+        }
         monton.removeAll(monton);
-        baraja = crearBaraja();
         Random random = new Random();
         Carta temp;
         int pos1, pos2;
