@@ -14,14 +14,17 @@ public class MainMultimedia {
             float duracion = Float.parseFloat(JOptionPane.showInputDialog("¿Cuanto  dura?"));
 
             if (opcion == 0){
-                String actorP = JOptionPane.showInputDialog("¿Como se llama el actor principal?");
-                opcion = JOptionPane.showOptionDialog(null, "¿Tiene un actor secundario?", "Actor secundario", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, null, 0);
+                String actor, actriz;
+                opcion = JOptionPane.showOptionDialog(null, "¿Tiene actor principal?", "Actor", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, null, 1);
                 if (opcion == 0){
-                    String actorS = JOptionPane.showInputDialog("¿Como se llama el actor secundario?");
-                    listaMultimedia[i] = new Pelicula(titulo, autor, Multimedia.FORMATOS[formatoPos], duracion,actorP, actorS);
-                } else if (opcion == 1) {
-                    listaMultimedia[i] = new Pelicula(titulo, autor, Multimedia.FORMATOS[formatoPos], duracion,actorP);
-                }
+                    actor = JOptionPane.showInputDialog("¿Como se llama el actor principal?");
+                }else actor = null;
+                opcion = JOptionPane.showOptionDialog(null, "¿Tiene actriz principal?", "Actriz", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, null, 0);
+                if (opcion == 0){
+                    actriz = JOptionPane.showInputDialog("¿Como se llama el actriz principal?");
+                } else actriz = null;
+
+                listaMultimedia[i] = new Pelicula(titulo, autor, Multimedia.FORMATOS[formatoPos], duracion,actor, actriz);
             }else if (opcion == 1){
                 String discografica = JOptionPane.showInputDialog("¿Cual es la discografica?");
                 int numCanciones = Integer.parseInt(JOptionPane.showInputDialog("¿Cuantas canciones hay?"));
