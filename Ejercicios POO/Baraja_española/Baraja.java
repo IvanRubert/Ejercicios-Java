@@ -26,7 +26,7 @@ public class Baraja {
         for (int i = 0; i < monton.toArray().length; i++) {
             baraja.add(monton.get(i));
         }
-        monton.removeAll(monton);
+        monton.clear();
         Random random = new Random();
         Carta temp;
         int pos1, pos2;
