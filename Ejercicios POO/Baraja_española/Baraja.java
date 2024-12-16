@@ -23,7 +23,7 @@ public class Baraja {
         return lista;
     }
     public void barajar(){
-        for (int i = 0; i < monton.toArray().length; i++) {
+        for (int i = 0; i < monton.size(); i++) {
             baraja.add(monton.get(i));
         }
         monton.clear();
@@ -47,7 +47,7 @@ public class Baraja {
         }
     }
     public int cartasDisponibles(){
-        return baraja.toArray().length;
+        return baraja.size();
     }
     public void darCartas(int numCartas){
         if (this.cartasDisponibles() >= numCartas){
@@ -61,7 +61,7 @@ public class Baraja {
     public void cartasMonton(){
         System.out.println("Cartas sacadas en el montón");
         System.out.println("--------------------------------");
-        for (int i = 0; i < monton.toArray().length; i++) {
+        for (int i = 0; i < monton.size(); i++) {
             System.out.println(monton.get(i).getCarta());
         }
     }
