@@ -16,6 +16,10 @@ public class ArrayList3 {
         System.out.println(productos);
     }
 
+    private static void addElement(String s, ArrayList<String> productos) {
+        productos.add(s);
+    }
+
     private static void eliminar(String s, ArrayList<String> productos) {
         productos.remove(s);
     }

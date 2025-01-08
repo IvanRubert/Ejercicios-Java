@@ -32,7 +32,15 @@ public class String5 {
             }
             if (!letraComp){return false;}
         }
-
+        for (int i = 0; i < s1Array.length; i++) {
+            boolean letraComp = false;
+            for (int j = 0; j < s2Array.length; j++) {
+                if (s2Array[i] == s1Array[j]){
+                    letraComp = true;
+                }
+            }
+            if (!letraComp){return false;}
+        }
         return true;
     }
 }

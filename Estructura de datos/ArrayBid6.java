@@ -24,7 +24,7 @@ public class ArrayBid6 {
                     for (int j = 0; j < productosVendidos.length; j++) {
                         suma+=productosVendidos[j][i];
                     }
-                    System.out.println("La venta total del dia "+(i+1)+" es "+suma);
+                    System.out.println("La venta total del dia "+(i+1)+" es "+suma+" €");
                     suma = 0;
                 }
             } else if (opcion == 2) {
