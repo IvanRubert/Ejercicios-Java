@@ -11,7 +11,9 @@ public class Cola3 {
         int opcion = -1;
         do {
             if (opcion != -1) {
-                System.out.println(colaUrgencias +""+ colaPacentes);
+                if (colaUrgencias.isEmpty()){
+                    System.out.println(colaPacentes);
+                } else System.out.println(colaUrgencias +""+ colaPacentes);
             }
             opcion = JOptionPane.showOptionDialog(null, "¿Qué quieres hacer?", "Opciones", JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, new String[]{"Llega paciente","Llega paciente grave", "Atender paciente", "Salir"}, 0);
             switch (opcion) {

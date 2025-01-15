@@ -21,8 +21,8 @@ public class Pila3 {
             System.out.println("Llamada al metodo "+metodo);
         }
         while (!pilaMetodos.isEmpty()){
-            System.out.println("Fin del metodo "+pilaMetodos.peek());
-            pilaMetodos.pop();
+            System.out.println("Fin del metodo "+pilaMetodos.pop());
+
         }
     }
 }

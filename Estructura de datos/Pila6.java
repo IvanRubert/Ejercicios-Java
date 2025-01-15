@@ -21,8 +21,7 @@ public class Pila6 {
         }
         binario.push(num);
         while (!binario.isEmpty()){
-            System.out.print(binario.peek());
-            binario.pop();
+            System.out.print(binario.pop());
         }
 
     }

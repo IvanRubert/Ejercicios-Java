@@ -7,8 +7,8 @@ public class Pila4 {
             platos.push("Plato "+i);
         }
         while (!platos.isEmpty()){
-            System.out.println("El camarero ha cogido el plato: "+platos.peek());
-            platos.pop();
+            System.out.println("El camarero ha cogido el plato: "+platos.pop());
+
         }
     }
 }
