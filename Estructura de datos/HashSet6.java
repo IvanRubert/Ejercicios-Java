@@ -5,12 +5,21 @@ import java.util.Set;
 
 public class HashSet6 {
     public static void main(String[] args) {
-        elementosUnicos("hola", "adios", "Pepe", "Pepe", "hola");
+        Set<String> a = new HashSet<>();
+        Set<String> b = new HashSet<>();
+        a.addAll(Arrays.asList(new String[] {"Hola", "prueba", "esta", "duplicado"}));
+        b.addAll(Arrays.asList(new String[] {"de", "esta", "esto", "es", "Hola"}));
+        Set<String> unicos = new HashSet<>();
+        unicos = elementosUnicos(a, b);
+        System.out.println(unicos);
     }
 
-    private static void elementosUnicos(String ... array) {
-        List<String> lista = Arrays.asList(array);
-        Set<String> unicos = new HashSet<>(lista);
-        System.out.println(unicos);
+    private static Set<String> elementosUnicos(Set<String> a, Set<String> b) {
+        Set<String> unicos = new HashSet<>(a);
+        Set<String> interseccion = new HashSet<>(a);
+        interseccion.retainAll(b);
+        unicos.addAll(b);
+        unicos.removeAll(interseccion);
+        return unicos;
     }
 }
